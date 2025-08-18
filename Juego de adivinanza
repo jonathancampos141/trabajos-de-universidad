@@ -1,0 +1,26 @@
+Bucle do-while: Juego de adivinanza
+import random
+# Número secreto a adivinar
+numero_secreto = 7
+adivinado = False
+# Simulamos un bucle do-while
+while True:
+ # Pedimos al usuario que adivine el número
+ adivinanza = int(input("Adivina el número secreto (entre 1 y 10): "))
+
+ # Comprobamos la adivinanza
+ if adivinanza < numero_secreto:
+ print("Demasiado bajo. Intenta de nuevo.")
+ elif adivinanza > numero_secreto:
+ print("Demasiado alto. Intenta de nuevo.")
+ else:
+ print("¡Correcto! Has adivinado el número.")
+ adivinado = True
+
+ # Preguntamos si quiere jugar de nuevo
+ if adivinado:
+ jugar_de_nuevo = input("¿Quieres jugar de nuevo? (s/n): ")
+ if jugar_de_nuevo.lower() != 's':
+ break
+ else:
+ adivinado = False # Reiniciamos la variable para el nuevo juego
